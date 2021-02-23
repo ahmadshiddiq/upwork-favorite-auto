@@ -354,14 +354,39 @@ export default function Home() {
       </header>
 
       <main>
-        <div className="testing-card">Lorem ipsum dolor sit amet.</div>
-
         {/* Services */}
-        <section className="pt-12 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto py-14 lg:pt-12 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Services</h2>
+            <h2 className="mb-4 text-3xl font-bold text-text lg:text-4xl">
+              Services
+            </h2>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          {/* service mobile */}
+          <div className="block lg:hidden">
+            <div className="flex">
+              <div className="transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                <a href="#" className="inline-block px-3 py-5">
+                  <h3 className="text-2xl font-bold text-text">
+                    {services[0].name}
+                  </h3>
+                  <p className="my-2 text-text">{services[0].description}</p>
+                  <img src={services[0].image} alt="" />
+                </a>
+              </div>
+            </div>
+            <div className="flex space-x-5 mt-14">
+              <div className="w-4 h-2 bg-brand"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+              <div className="w-4 h-2 bg-gray-300"></div>
+            </div>
+          </div>
+
+          {/* service desktop */}
+          <div className="hidden grid-cols-3 gap-8 lg:grid">
             {services.map((item, index) => (
               <div
                 className="transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg"
@@ -401,12 +426,14 @@ export default function Home() {
         </section>
 
         {/* Reviews */}
-        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto py-14 lg:pt-4 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Reviews</h2>
+            <h2 className="mb-4 text-3xl font-bold text-text lg:text-4xl">
+              Reviews
+            </h2>
           </div>
-          <div className="grid grid-cols-2">
-            <div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="flex justify-center">
               <a
                 href="#"
                 className="inline-block w-56 h-56 overflow-hidden rounded-full"
@@ -422,40 +449,44 @@ export default function Home() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 975 975"
-                className="w-8"
+                className="w-7 lg:w-8"
               >
                 <path
                   fill="#F0C150"
                   d="M925 57.2H621a50 50 0 0 0-50 50v304a50 50 0 0 0 50 50h145.5c-1.9 79.6-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8a50 50 0 0 0-24.8 67.1l36 76c11.6 24.4 40.3 35.1 65.1 24.4a555.9 555.9 0 0 0 167.7-108.8c55.6-53.7 93.7-114.3 114.3-181.9 20.6-67.6 31-159.8 31-276.8v-239a50 50 0 0 0-50-50zM106 913.5a565.3 565.3 0 0 0 167-108.6c56-53.7 94.3-114.1 115-181.2 20.5-67.1 30.8-159.6 30.8-277.5v-239a50 50 0 0 0-50-50h-304a50 50 0 0 0-50 50v304a50 50 0 0 0 50 50h145.5c-1.9 79.6-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8a50 50 0 0 0-24.8 67.1l36 75.8a50.1 50.1 0 0 0 65.2 24.4z"
                 ></path>
               </svg>
-              <p className="mt-2 mb-8">
+              <p className="mt-2 text-sm mb-7 lg:mb-8 lg:text-base text-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatum officia, error consequuntur soluta eos quod fugit.
                 Tenetur illo cumque iure et ea similique dolore praesentium
                 quod, reprehenderit neque molestiae at!
               </p>
-              <h4 className="mb-2 text-xl font-bold">John Doe</h4>
-              <h5 className="text-base font-bold">
+              <h4 className="mb-2 text-lg font-bold lg:text-xl text-text">
+                John Doe
+              </h4>
+              <h5 className="text-base font-bold text-text">
                 Lorem ipsum dolor sit amet.
               </h5>
             </div>
           </div>
           <div className="flex mt-6 space-x-6">
-            <div className="w-10 h-2 bg-brand"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-4 h-2 lg:w-10 bg-brand"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
           </div>
         </section>
 
         {/* Car arrivals */}
-        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto py-14 lg:pt-4 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Latest Car Arrivals</h2>
+            <h2 className="mb-4 text-3xl font-bold lg:text-4xl text-text">
+              Latest Car Arrivals
+            </h2>
           </div>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
             {cars.map((item, index) => (
               <a href="#" key={index}>
                 <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
@@ -472,16 +503,16 @@ export default function Home() {
               </a>
             ))}
             <div>
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-2xl font-bold text-text">
                 Lorem ipsum dolor sit amet.
               </h3>
-              <p className="py-3">
+              <p className="py-3 text-sm text-text lg:text-base">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Praesentium at, dolorem modi odio voluptatibus in?
               </p>
               <a
                 href="#"
-                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+                className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 lg:py-4 text-text lg:text-base lg:px-11 bg-brand border-brand hover:bg-transparent"
               >
                 Lorem, ipsum dolor.
               </a>
@@ -490,15 +521,15 @@ export default function Home() {
         </section>
 
         {/* Benefits */}
-        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto py-14 lg:pt-4 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Benefits</h2>
+            <h2 className="mb-4 text-4xl font-bold text-text">Benefits</h2>
           </div>
-          <div className="grid grid-cols-2 gap-8 py-4">
+          <div className="grid grid-cols-1 gap-8 py-4 lg:grid-cols-2">
             {benefits.map((item, index) => (
               <div className="flex items-center" key={index}>
                 <svg
-                  className="w-6 mr-6 text-brand"
+                  className="w-4 mr-5 lg:mr-6 lg:w-6 text-brand"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="5 5 10 10"
                   fill="currentColor"
@@ -509,14 +540,14 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <p>{item.benefit}</p>
+                <p className="text-sm text-text lg:text-base">{item.benefit}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* About */}
-        <section className="grid grid-cols-2 gap-8 pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="grid grid-cols-1 gap-8 px-4 mx-auto lg:grid-cols-2 py-14 lg:pt-4 lg:pb-32 max-w-7xl">
           <div>
             <img
               src="https://api.фаворит-авто.рф/uploads/63307e0d5ddc4fcc8c7946d04651ee86-1280.jpg"
@@ -525,8 +556,10 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="mb-4 text-4xl font-bold">About Company</h2>
-            <p className="mb-2">
+            <h2 className="mb-4 text-3xl font-bold text-text lg:text-4xl">
+              About Company
+            </h2>
+            <p className="mb-2 text-sm lg:text-base">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
               laudantium provident optio iste aperiam unde quasi quia dicta
               dolorum, rem eos non impedit incidunt quibusdam, harum neque,
@@ -535,7 +568,7 @@ export default function Home() {
             <div>
               <a
                 href="#"
-                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+                className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 lg:py-4 text-text lg:text-base lg:px-11 bg-brand border-brand hover:bg-transparent"
               >
                 Lorem ipsum dolor sit.
               </a>
@@ -544,46 +577,58 @@ export default function Home() {
         </section>
 
         {/* Team */}
-        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto py-14 lg:pt-4 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Our Teams</h2>
+            <h2 className="mb-4 text-3xl font-bold text-text lg:text-4xl">
+              Our Teams
+            </h2>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {teams.map((person, index) => (
               <div className="bg-cardBg" key={index}>
                 <img src={person.image} alt="" />
                 <div className="px-4 py-2">
-                  <h4 className="text-xl font-bold">{person.name}</h4>
-                  <h5 className="font-bold">{person.job}</h5>
+                  <h4 className="text-lg font-bold lg:text-xl text-text">
+                    {person.name}
+                  </h4>
+                  <h5 className="text-sm font-bold lg:text-base text-text">
+                    {person.job}
+                  </h5>
                 </div>
               </div>
             ))}
           </div>
           <div className="flex mt-6 space-x-6">
-            <div className="w-10 h-2 bg-brand"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
-            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-4 h-2 lg:w-10 bg-brand"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
           </div>
         </section>
 
         {/* Question */}
-        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+        <section className="px-4 mx-auto lg:pt-4 py-14 lg:pb-32 max-w-7xl">
           <div>
-            <h2 className="mb-4 text-4xl font-bold">Question Answer</h2>
+            <h2 className="mb-4 text-3xl font-bold lg:text-4xl text-text">
+              Question Answer
+            </h2>
           </div>
           <div className="grid gap-8">
             {questions.map((item, index) => (
-              <div className="px-6 py-4 bg-cardBg" key={index}>
-                <h5 className="font-bold">{item.question}</h5>
-                <p className="hidden mt-4">{item.answer}</p>
+              <div className="px-6 py-4 rounded bg-cardBg" key={index}>
+                <h5 className="text-sm font-bold text-text lg:text-base">
+                  {item.question}
+                </h5>
+                <p className="hidden mt-4 text-sm text-text lg:text-base">
+                  {item.answer}
+                </p>
               </div>
             ))}
             <div>
               <a
                 href="#"
-                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+                className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 lg:py-4 text-text lg:text-base lg:px-11 bg-brand border-brand hover:bg-transparent"
               >
                 Lorem, ipsum dolor.
               </a>
@@ -592,14 +637,14 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <div className="grid grid-cols-5 gap-8 pt-8 pb-2 mx-auto max-w-7xl">
+      <footer className="bg-cardBg">
+        <div className="grid grid-cols-1 gap-4 px-4 pb-12 mx-auto lg:gap-8 pt-7 lg:pt-8 lg:pb-2 lg:grid-cols-5 max-w-7xl">
           {/* Dropdown and social media icon */}
           <div>
             <div className="flex items-center justify-between px-4 py-3 mb-4 border rounded border-brand">
-              <p>Lorem, ipsum.</p>
+              <p className="text-sm text-text lg:text-base">Lorem, ipsum.</p>
               <svg
-                className="w-6"
+                className="w-5 lg:w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -611,7 +656,7 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <div className="flex space-x-5">
+            <div className="flex space-x-5 text-text">
               <a href="#">
                 <svg
                   className="w-6 transition-all opacity-70 hover:opacity-100"
@@ -686,45 +731,45 @@ export default function Home() {
           </div>
 
           {/* Second */}
-          <div>
+          <div className="text-text">
             {/* Parent will repeat */}
             <div>
-              <h5 className="font-bold">Address</h5>
-              <ul className="my-4">
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              <h5 className="text-sm font-bold lg:text-base">Address</h5>
+              <ul className="my-2 text-xs lg:my-4 lg:text-sm">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
               </ul>
             </div>
 
-            <div>
-              <h5 className="font-bold">Company</h5>
-              <ul className="my-4">
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <h5 className="font-bold">Services</h5>
-              <ul className="my-4">
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+            <div className="text-text">
+              <h5 className="text-sm font-bold lg:text-base">Company</h5>
+              <ul className="my-2 text-xs lg:my-4 lg:text-sm">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
               </ul>
             </div>
           </div>
 
-          <div>
+          <div className="text-text">
             <div>
-              <h5 className="font-bold">Documents</h5>
-              <ul className="my-4">
-                <li className="text-sm">Lorem, ipsum dolor.</li>
-                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              <h5 className="text-sm font-bold lg:text-base">Services</h5>
+              <ul className="my-2 text-xs lg:my-4 lg:text-sm">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-text">
+            <div>
+              <h5 className="text-sm font-bold lg:text-base">Documents</h5>
+              <ul className="my-2 text-xs lg:my-4 lg:text-sm">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
               </ul>
             </div>
           </div>
@@ -732,9 +777,11 @@ export default function Home() {
 
         <hr />
 
-        <div className="py-6 mx-auto max-w-7xl">
-          <p className="mb-8">&copy; Lorem ipsum dolor sit.</p>
-          <p className="text-sm opacity-75">
+        <div className="px-4 py-6 mx-auto max-w-7xl">
+          <p className="mb-4 text-sm lg:mb-8 lg:text-base">
+            &copy; Lorem ipsum dolor sit.
+          </p>
+          <p className="text-xs opacity-75 lg:text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
             labore tenetur. Voluptatem nostrum itaque facere?
           </p>
