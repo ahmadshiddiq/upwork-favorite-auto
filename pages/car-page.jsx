@@ -40,7 +40,7 @@ const questions = [
   },
 ];
 
-function About() {
+function CarPage() {
   return (
     <div>
       <main>
@@ -240,32 +240,32 @@ function About() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
               perspiciatis porro magnam modi, sed soluta.
             </p>
-            <div class="max-w-md">
-              <div class="grid grid-cols-1">
-                <label class="block">
+            <div className="max-w-md">
+              <div className="grid grid-cols-1">
+                <label className="block">
                   <input
                     type="text"
-                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50 my-2"
+                    className="block w-full my-2 border-gray-300 rounded-md shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
                     placeholder=""
                   />
                   {/* <span class="text-brand">Full name</span> */}
                 </label>
-                <div class="block">
-                  <label class="inline-flex items-center">
+                <div className="block">
+                  <label className="inline-flex items-center">
                     <input
                       type="checkbox"
-                      class="rounded border-gray-300 text-brand shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
+                      className="border-gray-300 rounded shadow-sm text-brand focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
                     />
-                    <span class="ml-2">Lorem ipsum dolor sit amet.</span>
+                    <span className="ml-2">Lorem ipsum dolor sit amet.</span>
                   </label>
                 </div>
-                <div class="block">
-                  <label class="inline-flex items-center">
+                <div className="block">
+                  <label className="inline-flex items-center">
                     <input
                       type="checkbox"
-                      class="rounded border-gray-300 text-brand shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
+                      className="border-gray-300 rounded shadow-sm text-brand focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
                     />
-                    <span class="ml-2">
+                    <span className="ml-2">
                       Lorem ipsum dolor sit amet consectetur.
                     </span>
                   </label>
@@ -502,4 +502,4 @@ function About() {
   );
 }
 
-export default About;
+export default CarPage;
