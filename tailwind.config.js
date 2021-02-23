@@ -32,6 +32,9 @@ module.exports = {
           "Noto Color Emoji",
         ],
       },
+      gridTemplateColumns: {
+        "car-page": "auto auto 1fr auto",
+      },
     },
   },
   variants: {},

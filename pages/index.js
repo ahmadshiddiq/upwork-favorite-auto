@@ -490,8 +490,12 @@ export default function Home() {
             {cars.map((item, index) => (
               <a href="#" key={index}>
                 <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
-                  <div>
-                    <img src={item.image} alt="" />
+                  <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="transition-all transform scale-100 hover:scale-110"
+                    />
                   </div>
                   <div className="px-4 py-2">
                     <p className="text-text">
@@ -512,7 +516,7 @@ export default function Home() {
               </p>
               <a
                 href="#"
-                className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 md:py-4 text-text md:text-base md:px-11 bg-brand border-brand hover:bg-transparent"
+                className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 md:py-3 text-text md:text-base md:px-11 bg-brand border-brand hover:bg-transparent"
               >
                 Lorem, ipsum dolor.
               </a>
