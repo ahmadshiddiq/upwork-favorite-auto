@@ -48,7 +48,7 @@ function About() {
         <section className="grid grid-rows-2 gap-2 px-4 py-2 mx-auto grid-cols-car-page-mobile lg:gap-x-4 lg:grid-cols-car-page lg:py-2 max-w-7xl">
           <div className="flex items-center col-start-3 lg:row-start-1 lg:row-end-2 lg:col-span-full">
             <svg
-              className="w-3 mr-1 lg:w-4 lg:mr-2"
+              className="w-3 mr-1 lg:w-4 md:mr-2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -59,18 +59,20 @@ function About() {
                 clipRule="evenodd"
               />
             </svg>
-            <p className="text-xs lg:text-base">Back to home</p>
+            <p className="text-xs md:text-sm lg:text-base">Back to home</p>
           </div>
           <div className="col-span-2 row-start-1 lg:col-span-1">
-            <h1 className="text-sm font-bold lg:text-4xl text-text">
+            <h1 className="text-sm font-bold md:text-base lg:text-4xl text-text">
               Volkswagen Polo I
             </h1>
           </div>
           <div>
-            <p className="text-sm lg:text-4xl text-text">1998</p>
+            <p className="text-sm md:text-base lg:text-4xl text-text">1998</p>
           </div>
           <div className="">
-            <p className="text-sm opacity-50 lg:text-4xl text-text">79 000 ₽</p>
+            <p className="text-sm opacity-50 md:text-base lg:text-4xl text-text">
+              79 000 ₽
+            </p>
           </div>
           <div>
             <a href="#" className="flex items-center">
@@ -88,22 +90,22 @@ function About() {
                   d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <p className="text-xs font-bold">Buy Now</p>
+              <p className="text-xs font-bold md:text-sm">Buy Now</p>
             </a>
           </div>
         </section>
 
-        <section className="px-4 mx-auto py-14 lg:pt-10 lg:pb-4 max-w-7xl">
+        <section className="px-4 mx-auto py-14 md:py-10 lg:pt-10 lg:pb-4 max-w-7xl">
           {/* Mobile mode */}
-          <div className="block lg:hidden">
+          <div className="block md:hidden">
             <img
               src="https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG"
               alt=""
             />
           </div>
 
-          {/* Desktop mode */}
-          <div className="hidden grid-cols-2 gap-12 lg:grid">
+          {/* Tab & Desktop mode */}
+          <div className="hidden grid-cols-2 gap-12 md:grid">
             <div>
               <img
                 src="https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG"
@@ -119,11 +121,11 @@ function About() {
           </div>
 
           <div className="flex space-x-6 mt-9">
-            <div className="w-4 h-2 lg:w-10 bg-brand"></div>
-            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
-            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
-            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
-            <div className="w-4 h-2 bg-gray-300 lg:w-10"></div>
+            <div className="w-4 h-2 md:w-6 lg:w-10 bg-brand"></div>
+            <div className="w-4 h-2 bg-gray-300 md:w-6 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 md:w-6 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 md:w-6 lg:w-10"></div>
+            <div className="w-4 h-2 bg-gray-300 md:w-6 lg:w-10"></div>
           </div>
         </section>
 
@@ -133,7 +135,7 @@ function About() {
               Characteristics
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-1 lg:gap-4 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-1 lg:gap-4 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <b className="mr-4">Lorem</b>
               <span>Ipsum</span>
@@ -193,7 +195,7 @@ function About() {
               Equipment
             </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <p>Lorem, ipsum.</p>
             <p>Lorem, ipsum.</p>
             <p>Lorem, ipsum.</p>
@@ -311,11 +313,11 @@ function About() {
             {cars.map((item, index) => (
               <a href="#" key={index}>
                 <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
-                  <div className="overflow-hidden">
+                  <div className="flex justify-center h-auto overflow-hidden lg:h-auto md:h-64">
                     <img
                       src={item.image}
                       alt=""
-                      className="transition-all transform scale-100 hover:scale-110"
+                      className="object-cover w-full transition-all transform scale-100 hover:scale-110"
                     />
                   </div>
                   <div className="px-4 py-2">
