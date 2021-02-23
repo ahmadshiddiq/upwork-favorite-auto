@@ -490,11 +490,11 @@ export default function Home() {
             {cars.map((item, index) => (
               <a href="#" key={index}>
                 <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
-                  <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                  <div className="flex justify-center h-auto overflow-hidden lg:h-auto md:h-64">
                     <img
                       src={item.image}
                       alt=""
-                      className="transition-all transform scale-100 hover:scale-110"
+                      className="object-cover w-full transition-all transform scale-100 hover:scale-110"
                     />
                   </div>
                   <div className="px-4 py-2">

@@ -61,7 +61,7 @@ function About() {
             </svg>
             <p className="text-xs md:text-sm lg:text-base">Back to home</p>
           </div>
-          <div className="col-span-2 row-start-1 lg:col-span-1">
+          <div className="col-span-2 row-start-1 lg:row-start-2 lg:col-span-1">
             <h1 className="text-sm font-bold md:text-base lg:text-4xl text-text">
               Volkswagen Polo I
             </h1>
@@ -245,10 +245,10 @@ function About() {
                 <label class="block">
                   <input
                     type="text"
-                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"
+                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50 my-2"
                     placeholder=""
                   />
-                  <span class="text-brand">Full name</span>
+                  {/* <span class="text-brand">Full name</span> */}
                 </label>
                 <div class="block">
                   <label class="inline-flex items-center">
