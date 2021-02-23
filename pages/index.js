@@ -1,5 +1,116 @@
 import Head from "next/head";
 
+const services = [
+  {
+    name: "White Car",
+    description: "Im not batman with fancy BatMobile",
+    image:
+      "https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png",
+  },
+  {
+    name: "White Car",
+    description: "Im not batman with fancy BatMobile",
+    image:
+      "https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png",
+  },
+  {
+    name: "White Car",
+    description: "Im not batman with fancy BatMobile",
+    image:
+      "https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png",
+  },
+  {
+    name: "White Car",
+    description: "Im not batman with fancy BatMobile",
+    image:
+      "https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png",
+  },
+  {
+    name: "White Car",
+    description: "Im not batman with fancy BatMobile",
+    image:
+      "https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png",
+  },
+];
+
+const cars = [
+  {
+    name: "Volkswagen Polo 1",
+    year: "1998",
+    price: "79 000",
+    image:
+      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
+  },
+  {
+    name: "Volkswagen Polo 1",
+    year: "1998",
+    price: "79 000",
+    image:
+      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
+  },
+  {
+    name: "Volkswagen Polo 1",
+    year: "1998",
+    price: "79 000",
+    image:
+      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
+  },
+];
+
+const benefits = [
+  {
+    benefit: "This is random benefits from looping.",
+  },
+  {
+    benefit: "This is random benefits from looping.",
+  },
+  {
+    benefit: "This is random benefits from looping.",
+  },
+  {
+    benefit: "This is random benefits from looping.",
+  },
+];
+
+const teams = [
+  {
+    name: "John Doe",
+    job: "Used Car Assessment Expert",
+    image:
+      "https://api.фаворит-авто.рф/uploads/2b2441f07b0d40a3a665c51a9d281687-1280.jpg",
+  },
+  {
+    name: "John Doe",
+    job: "Used Car Assessment Expert",
+    image:
+      "https://api.фаворит-авто.рф/uploads/2b2441f07b0d40a3a665c51a9d281687-1280.jpg",
+  },
+  {
+    name: "John Doe",
+    job: "Used Car Assessment Expert",
+    image:
+      "https://api.фаворит-авто.рф/uploads/2b2441f07b0d40a3a665c51a9d281687-1280.jpg",
+  },
+];
+
+const questions = [
+  {
+    question: "Lorem ipsum dolor sit",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam laudantium provident optio iste aperiam unde quasi quia dicta dolorum, rem eos non impedit incidunt quibusdam, harum neque, eveniet facilis hic!",
+  },
+  {
+    question: "Lorem ipsum dolor sit",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam laudantium provident optio iste aperiam unde quasi quia dicta dolorum, rem eos non impedit incidunt quibusdam, harum neque, eveniet facilis hic!",
+  },
+  {
+    question: "Lorem ipsum dolor sit",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam laudantium provident optio iste aperiam unde quasi quia dicta dolorum, rem eos non impedit incidunt quibusdam, harum neque, eveniet facilis hic!",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -243,20 +354,392 @@ export default function Home() {
       </header>
 
       <main>
+        <div className="testing-card">Lorem ipsum dolor sit amet.</div>
+
         {/* Services */}
-        <section className="grid grid-cols-3 mx-auto max-w-7xl">
+        <section className="pt-12 pb-32 mx-auto max-w-7xl">
           <div>
-            <h3>Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h2 className="mb-4 text-4xl font-bold">Services</h2>
+          </div>
+          <div className="grid grid-cols-3 gap-8">
+            {services.map((item, index) => (
+              <div
+                className="transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg"
+                key={index}
+              >
+                <a href="#" className="inline-block p-6">
+                  <h3 className="text-2xl font-bold text-text">{item.name}</h3>
+                  <p className="my-2 text-text">{item.description}</p>
+                  <img src={item.image} alt="" />
+                </a>
+              </div>
+            ))}
+            <div className="grid grid-rows-2 gap-8">
+              <div className="transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                <a href="#" className="inline-block p-6">
+                  <h3 className="text-2xl font-bold text-text">
+                    Lorem ipsum dolor sit.
+                  </h3>
+                  <p className="my-2 text-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Recusandae, hic.
+                  </p>
+                </a>
+              </div>
+              <div className="transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                <a href="#" className="inline-block p-6">
+                  <h3 className="text-2xl font-bold text-text">
+                    Lorem, ipsum dolor.
+                  </h3>
+                  <p className="my-2 text-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
+            <h2 className="mb-4 text-4xl font-bold">Reviews</h2>
+          </div>
+          <div className="grid grid-cols-2">
+            <div>
+              <a
+                href="#"
+                className="inline-block w-56 h-56 overflow-hidden rounded-full"
+              >
+                <img
+                  src="https://api.фаворит-авто.рф/uploads/8285a45234ba4486b4841ba9faae0898-1280.jpg"
+                  alt=""
+                  className="w-full"
+                />
+              </a>
+            </div>
+            <div className="flex flex-col">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 975 975"
+                className="w-8"
+              >
+                <path
+                  fill="#F0C150"
+                  d="M925 57.2H621a50 50 0 0 0-50 50v304a50 50 0 0 0 50 50h145.5c-1.9 79.6-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8a50 50 0 0 0-24.8 67.1l36 76c11.6 24.4 40.3 35.1 65.1 24.4a555.9 555.9 0 0 0 167.7-108.8c55.6-53.7 93.7-114.3 114.3-181.9 20.6-67.6 31-159.8 31-276.8v-239a50 50 0 0 0-50-50zM106 913.5a565.3 565.3 0 0 0 167-108.6c56-53.7 94.3-114.1 115-181.2 20.5-67.1 30.8-159.6 30.8-277.5v-239a50 50 0 0 0-50-50h-304a50 50 0 0 0-50 50v304a50 50 0 0 0 50 50h145.5c-1.9 79.6-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8a50 50 0 0 0-24.8 67.1l36 75.8a50.1 50.1 0 0 0 65.2 24.4z"
+                ></path>
+              </svg>
+              <p className="mt-2 mb-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum officia, error consequuntur soluta eos quod fugit.
+                Tenetur illo cumque iure et ea similique dolore praesentium
+                quod, reprehenderit neque molestiae at!
+              </p>
+              <h4 className="mb-2 text-xl font-bold">John Doe</h4>
+              <h5 className="text-base font-bold">
+                Lorem ipsum dolor sit amet.
+              </h5>
+            </div>
+          </div>
+          <div className="flex mt-6 space-x-6">
+            <div className="w-10 h-2 bg-brand"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+          </div>
+        </section>
+
+        {/* Car arrivals */}
+        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
+            <h2 className="mb-4 text-4xl font-bold">Latest Car Arrivals</h2>
+          </div>
+          <div className="grid grid-cols-4 gap-8">
+            {cars.map((item, index) => (
+              <a href="#" key={index}>
+                <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                  <div>
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="px-4 py-2">
+                    <p className="text-text">
+                      <b>{item.name}</b> <span>{item.year}</span>
+                    </p>
+                    <p className="opacity-50 text-text">{item.price} ₽</p>
+                  </div>
+                </div>
+              </a>
+            ))}
+            <div>
+              <h3 className="text-2xl font-bold">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <p className="py-3">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Praesentium at, dolorem modi odio voluptatibus in?
+              </p>
+              <a
+                href="#"
+                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+              >
+                Lorem, ipsum dolor.
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
+            <h2 className="mb-4 text-4xl font-bold">Benefits</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-8 py-4">
+            {benefits.map((item, index) => (
+              <div className="flex items-center" key={index}>
+                <svg
+                  className="w-6 mr-6 text-brand"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="5 5 10 10"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <p>{item.benefit}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* About */}
+        <section className="grid grid-cols-2 gap-8 pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
             <img
-              src="https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png"
+              src="https://api.фаворит-авто.рф/uploads/63307e0d5ddc4fcc8c7946d04651ee86-1280.jpg"
               alt=""
+              className="w-full"
             />
+          </div>
+          <div className="flex flex-col justify-center">
+            <h2 className="mb-4 text-4xl font-bold">About Company</h2>
+            <p className="mb-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+              laudantium provident optio iste aperiam unde quasi quia dicta
+              dolorum, rem eos non impedit incidunt quibusdam, harum neque,
+              eveniet facilis hic!
+            </p>
+            <div>
+              <a
+                href="#"
+                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+              >
+                Lorem ipsum dolor sit.
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Team */}
+        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
+            <h2 className="mb-4 text-4xl font-bold">Our Teams</h2>
+          </div>
+          <div className="grid grid-cols-3 gap-8">
+            {teams.map((person, index) => (
+              <div className="bg-cardBg" key={index}>
+                <img src={person.image} alt="" />
+                <div className="px-4 py-2">
+                  <h4 className="text-xl font-bold">{person.name}</h4>
+                  <h5 className="font-bold">{person.job}</h5>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex mt-6 space-x-6">
+            <div className="w-10 h-2 bg-brand"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+            <div className="w-10 h-2 bg-gray-300"></div>
+          </div>
+        </section>
+
+        {/* Question */}
+        <section className="pt-4 pb-32 mx-auto max-w-7xl">
+          <div>
+            <h2 className="mb-4 text-4xl font-bold">Question Answer</h2>
+          </div>
+          <div className="grid gap-8">
+            {questions.map((item, index) => (
+              <div className="px-6 py-4 bg-cardBg" key={index}>
+                <h5 className="font-bold">{item.question}</h5>
+                <p className="hidden mt-4">{item.answer}</p>
+              </div>
+            ))}
+            <div>
+              <a
+                href="#"
+                className="inline-block py-4 font-bold transition-all border-2 px-11 bg-brand border-brand hover:bg-transparent"
+              >
+                Lorem, ipsum dolor.
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer></footer>
+      <footer>
+        <div className="grid grid-cols-5 gap-8 pt-8 pb-2 mx-auto max-w-7xl">
+          {/* Dropdown and social media icon */}
+          <div>
+            <div className="flex items-center justify-between px-4 py-3 mb-4 border rounded border-brand">
+              <p>Lorem, ipsum.</p>
+              <svg
+                className="w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="flex space-x-5">
+              <a href="#">
+                <svg
+                  className="w-6 transition-all opacity-70 hover:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  className="w-6 transition-all opacity-70 hover:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  className="w-6 transition-all opacity-70 hover:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  className="w-6 transition-all opacity-70 hover:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  className="w-6 transition-all opacity-70 hover:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Second */}
+          <div>
+            {/* Parent will repeat */}
+            <div>
+              <h5 className="font-bold">Address</h5>
+              <ul className="my-4">
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="font-bold">Company</h5>
+              <ul className="my-4">
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <h5 className="font-bold">Services</h5>
+              <ul className="my-4">
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <h5 className="font-bold">Documents</h5>
+              <ul className="my-4">
+                <li className="text-sm">Lorem, ipsum dolor.</li>
+                <li className="text-sm">Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="py-6 mx-auto max-w-7xl">
+          <p className="mb-8">&copy; Lorem ipsum dolor sit.</p>
+          <p className="text-sm opacity-75">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+            labore tenetur. Voluptatem nostrum itaque facere?
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

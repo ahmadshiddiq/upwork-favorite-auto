@@ -1,4 +1,26 @@
-/* ./styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  * {
+    @apply text-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  .card {
+    @apply transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg;
+  }
+
+  .testing-card {
+    @apply flex items-center justify-center p-10 text-gray-800 bg-red-500;
+  }
+}
