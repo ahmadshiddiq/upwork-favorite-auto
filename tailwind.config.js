@@ -34,6 +34,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "car-page": "auto auto 1fr auto",
+        "car-page-mobile": "auto 1fr auto",
       },
     },
   },

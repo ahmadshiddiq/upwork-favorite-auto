@@ -45,10 +45,10 @@ function About() {
     <div>
       <main>
         {/* Title on normal, not scrolled yet */}
-        <section className="grid grid-rows-2 px-4 py-2 mx-auto gap-x-4 grid-cols-car-page lg:py-2 max-w-7xl">
-          <div className="flex items-center row-start-1 row-end-2 col-span-full">
+        <section className="grid grid-rows-2 gap-2 px-4 py-2 mx-auto grid-cols-car-page-mobile lg:gap-x-4 lg:grid-cols-car-page lg:py-2 max-w-7xl">
+          <div className="flex items-center col-start-3 lg:row-start-1 lg:row-end-2 lg:col-span-full">
             <svg
-              className="w-4 mr-2"
+              className="w-3 mr-1 lg:w-4 lg:mr-2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -59,21 +59,23 @@ function About() {
                 clipRule="evenodd"
               />
             </svg>
-            <p>Back to home</p>
+            <p className="text-xs lg:text-base">Back to home</p>
+          </div>
+          <div className="col-span-2 row-start-1 lg:col-span-1">
+            <h1 className="text-sm font-bold lg:text-4xl text-text">
+              Volkswagen Polo I
+            </h1>
           </div>
           <div>
-            <h1 className="text-4xl font-bold text-text">Volkswagen Polo I</h1>
-          </div>
-          <div>
-            <p className="text-4xl text-text">1998</p>
+            <p className="text-sm lg:text-4xl text-text">1998</p>
           </div>
           <div className="">
-            <p className="text-4xl opacity-50 text-text">79 000 ₽</p>
+            <p className="text-sm opacity-50 lg:text-4xl text-text">79 000 ₽</p>
           </div>
           <div>
             <a href="#" className="flex items-center">
               <svg
-                className="w-8 mr-2"
+                className="w-4 mr-1 lg:mr-2 lg:w-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -86,13 +88,22 @@ function About() {
                   d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <p className="font-bold">Buy Now</p>
+              <p className="text-xs font-bold">Buy Now</p>
             </a>
           </div>
         </section>
 
         <section className="px-4 mx-auto py-14 lg:pt-10 lg:pb-4 max-w-7xl">
-          <div className="grid grid-cols-2 gap-12">
+          {/* Mobile mode */}
+          <div className="block lg:hidden">
+            <img
+              src="https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG"
+              alt=""
+            />
+          </div>
+
+          {/* Desktop mode */}
+          <div className="hidden grid-cols-2 gap-12 lg:grid">
             <div>
               <img
                 src="https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG"
@@ -122,7 +133,7 @@ function About() {
               Characteristics
             </h2>
           </div>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 gap-1 lg:gap-4 lg:grid-cols-4">
             <div>
               <b className="mr-4">Lorem</b>
               <span>Ipsum</span>
@@ -182,7 +193,7 @@ function About() {
               Equipment
             </h2>
           </div>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4">
             <p>Lorem, ipsum.</p>
             <p>Lorem, ipsum.</p>
             <p>Lorem, ipsum.</p>
@@ -268,7 +279,7 @@ function About() {
               Question Answer
             </h2>
           </div>
-          <div className="grid gap-8">
+          <div className="grid gap-7 lg:gap-8">
             {questions.map((item, index) => (
               <div className="px-6 py-4 rounded bg-cardBg" key={index}>
                 <h5 className="text-sm font-bold text-text md:text-base">
