@@ -1,220 +1,112 @@
-const cars = [
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-  {
-    name: "Volkswagen Polo 1",
-    year: "1998",
-    price: "79 000",
-    image:
-      "https://api.фаворит-авто.рф/uploads/f67b92aac0a6451880cbb42cb2b3cf28-1280.JPG",
-  },
-];
-
-function Cars() {
+function Services() {
   return (
     <div>
       <main>
         <section className="px-4 py-2 mx-auto lg:py-2 max-w-7xl">
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl text-text">
-            Cars for sale
-          </h1>
-          <span>
-            We have <b className="text-2xl md:text-3xl text-text">110</b> Cars
-          </span>
-        </section>
-
-        <section className="px-4 py-4 mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-            {cars.map((item, index) => (
-              <a href="#" key={index}>
-                <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
-                  <div className="flex justify-center h-auto overflow-hidden lg:h-auto md:h-64">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="object-cover w-full transition-all transform scale-100 hover:scale-110"
-                    />
-                  </div>
-                  <div className="px-4 py-2">
-                    <p className="text-text">
-                      <b>{item.name}</b> <span>{item.year}</span>
-                    </p>
-                    <p className="opacity-50 text-text">{item.price} ₽</p>
-                  </div>
-                </div>
-              </a>
-            ))}
+          {/* top section */}
+          <div className="grid max-w-3xl gap-6 md:gap-8">
+            <h1 className="text-4xl font-bold md:text-5xl text-text">
+              Car Buyback
+            </h1>
+            <h3 className="text-xl font-bold text-text md:text-2xl">
+              Lorem ipsum dolor sit amet.
+            </h3>
+            <form className="grid grid-cols-1 gap-2 lg:grid-cols-4 md:gap-4">
+              <select className="block w-full rounded shadow-sm border-brand focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                <option disabled selected>
+                  Brand
+                </option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+              </select>
+              <select className="block w-full rounded shadow-sm border-brand focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                <option disabled selected>
+                  Model
+                </option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+              </select>
+              <select className="block w-full rounded shadow-sm border-brand focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                <option disabled selected>
+                  Other
+                </option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+                <option>Lorem, ipsum.</option>
+              </select>
+              <div className="col-span-1 mt-4 lg:col-span-4 md:mt-2 lg:mt-4">
+                <a
+                  href="#"
+                  className="inline-block w-full px-10 py-3 text-sm font-bold text-center transition-all border-2 md:w-auto md:py-3 text-text md:text-base md:px-11 bg-brand border-brand hover:bg-transparent"
+                >
+                  Submit Now
+                </a>
+              </div>
+            </form>
+            <div>
+              <img
+                src="https://api.фаворит-авто.рф/uploads/33e7ee1ee3ef42e986ced4c437ae86f6-1280.png"
+                alt=""
+              />
+            </div>
           </div>
-        </section>
 
-        <section className="flex px-4 pt-4 pb-20 mx-auto space-x-2 max-w-7xl">
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            1
-          </a>
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            2
-          </a>
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            3
-          </a>
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            4
-          </a>
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            5
-          </a>
-          <a
-            className="px-4 py-2 text-sm border border-text text-text md:text-base"
-            href="#"
-          >
-            6
-          </a>
+          {/* bottom section / text section */}
+          <div className="max-w-3xl py-16 space-y-2">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit
+              nostrum blanditiis officiis voluptatibus aspernatur, odio saepe
+              esse vel expedita corrupti odit consectetur impedit veniam soluta
+              illo ad quas delectus.
+            </p>
+            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              reiciendis repudiandae aspernatur recusandae labore sit, earum
+              sint tempore quod mollitia dolorem odio. Similique porro
+              blanditiis natus, minima soluta reprehenderit ad?
+            </p>
+            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+              deleniti, molestiae fuga fugiat perspiciatis eius eligendi unde
+              ipsum iste architecto expedita, asperiores molestias iure sequi
+              soluta, adipisci est praesentium officiis.
+            </p>
+            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+              fugiat ut voluptates, temporibus quam eius pariatur quia
+              laudantium repellat, nesciunt in itaque deserunt praesentium
+              molestiae velit optio numquam non beatae!
+              <ul className="list-disc list-inside">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+              </ul>
+            </p>
+            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ab
+              itaque nobis repellat praesentium error delectus sapiente. Iure
+              fugiat voluptatum dicta odio, sit tempora reiciendis, consectetur,
+              voluptate laborum quia iusto.
+            </p>
+
+            {/* button */}
+            <a
+              href="#"
+              className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 md:py-3 text-text md:text-base md:px-11 bg-brand border-brand hover:bg-transparent"
+            >
+              Lorem ipsum dolor sit.
+            </a>
+          </div>
         </section>
       </main>
 
@@ -372,4 +264,4 @@ function Cars() {
   );
 }
 
-export default Cars;
+export default Services;

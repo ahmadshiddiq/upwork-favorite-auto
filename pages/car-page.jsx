@@ -241,7 +241,7 @@ function CarPage() {
               perspiciatis porro magnam modi, sed soluta.
             </p>
             <div className="max-w-md">
-              <div className="grid grid-cols-1">
+              <form className="grid grid-cols-1">
                 <label className="block">
                   <input
                     type="text"
@@ -270,7 +270,15 @@ function CarPage() {
                     </span>
                   </label>
                 </div>
-              </div>
+                <div className="mt-2">
+                  <a
+                    href="#"
+                    className="inline-block px-10 py-3 text-sm font-bold transition-all border-2 md:py-3 text-text md:text-base md:px-11 bg-brand border-brand hover:bg-transparent"
+                  >
+                    Lorem, ipsum dolor.
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </section>
