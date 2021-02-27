@@ -44,56 +44,65 @@ function CarPage() {
   return (
     <div>
       <main>
-        {/* Title on normal, not scrolled yet */}
-        <section className="grid grid-rows-2 gap-2 px-4 py-2 mx-auto grid-cols-car-page-mobile lg:gap-x-4 lg:grid-cols-car-page lg:py-2 max-w-7xl">
-          <div className="flex items-center col-start-3 lg:row-start-1 lg:row-end-2 lg:col-span-full">
-            <svg
-              className="w-3 mr-1 lg:w-4 md:mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <p className="text-xs md:text-sm lg:text-base">Back to home</p>
-          </div>
-          <div className="col-span-2 row-start-1 lg:row-start-2 lg:col-span-1">
-            <h1 className="text-sm font-bold md:text-base lg:text-4xl text-text">
-              Volkswagen Polo I
-            </h1>
-          </div>
-          <div>
-            <p className="text-sm md:text-base lg:text-4xl text-text">1998</p>
-          </div>
-          <div className="">
-            <p className="text-sm opacity-50 md:text-base lg:text-4xl text-text">
-              79 000 ₽
-            </p>
-          </div>
-          <div>
-            <a href="#" className="flex items-center">
+        {/* Page info when default */}
+        <section className="w-full mt-20 bg-white">
+          <div className="grid grid-rows-2 px-4 py-2 mx-auto grid-cols-car-page-mobile lg:gap-x-4 lg:grid-cols-car-page lg:py-2 max-w-7xl">
+            <div className="flex items-center col-start-3 lg:row-start-1 lg:row-end-2 lg:col-span-full">
               <svg
-                className="w-4 mr-1 lg:mr-2 lg:w-8"
+                className="w-3 mr-1 lg:w-4 md:mr-2"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  fillRule="evenodd"
+                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
                 />
               </svg>
-              <p className="text-xs font-bold md:text-sm">Buy Now</p>
-            </a>
+              <p className="text-xs md:text-sm lg:text-base">Back to home</p>
+            </div>
+            <div className="col-span-2 row-start-1 lg:row-start-2 lg:col-span-1">
+              {/* scroll to lg:text-2xl */}
+              <h1 className="text-sm font-bold md:text-base lg:text-4xl text-text">
+                Volkswagen Polo I
+              </h1>
+            </div>
+            <div>
+              {/* scroll to lg:text-2xl */}
+              <p className="text-sm md:text-base lg:text-4xl text-text">1998</p>
+            </div>
+            <div>
+              {/* scroll to lg:text-2xl */}
+              <p className="text-sm opacity-50 md:text-base lg:text-4xl text-text">
+                79 000 ₽
+              </p>
+            </div>
+            <div>
+              <a href="#" className="flex items-center">
+                <svg
+                  // scroll to lg:w-8
+                  className="w-4 mr-1 lg:mr-2 lg:w-9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p className="text-xs font-bold md:text-sm">Buy Now</p>
+              </a>
+            </div>
           </div>
         </section>
+
+        {/* Space for fixed position on first section */}
+        {/* <div className="h-44"></div> */}
 
         <section className="px-4 mx-auto py-14 md:py-10 lg:pt-10 lg:pb-4 max-w-7xl">
           {/* Mobile mode */}

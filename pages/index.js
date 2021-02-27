@@ -489,12 +489,12 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
             {cars.map((item, index) => (
               <a href="#" key={index}>
-                <div className="flex flex-col overflow-hidden transition-all rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
+                <div className="flex flex-col overflow-hidden transition-all duration-500 rounded bg-cardBg hover:bg-cardBgHover hover:shadow-lg">
                   <div className="flex justify-center h-auto overflow-hidden lg:h-auto md:h-64">
                     <img
                       src={item.image}
                       alt=""
-                      className="object-cover w-full transition-all transform scale-100 hover:scale-110"
+                      className="object-cover w-full transition-all duration-500 transform scale-100 hover:scale-110"
                     />
                   </div>
                   <div className="px-4 py-2">
@@ -624,6 +624,8 @@ export default function Home() {
                 <h5 className="text-sm font-bold text-text md:text-base">
                   {item.question}
                 </h5>
+
+                {/* When question expand active, remove hidden */}
                 <p className="hidden mt-4 text-sm text-text md:text-base">
                   {item.answer}
                 </p>

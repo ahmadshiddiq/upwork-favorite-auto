@@ -58,46 +58,54 @@ function Services() {
 
           {/* bottom section / text section */}
           <div className="max-w-3xl py-16 space-y-2">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit
-              nostrum blanditiis officiis voluptatibus aspernatur, odio saepe
-              esse vel expedita corrupti odit consectetur impedit veniam soluta
-              illo ad quas delectus.
-            </p>
-            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              reiciendis repudiandae aspernatur recusandae labore sit, earum
-              sint tempore quod mollitia dolorem odio. Similique porro
-              blanditiis natus, minima soluta reprehenderit ad?
-            </p>
-            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              deleniti, molestiae fuga fugiat perspiciatis eius eligendi unde
-              ipsum iste architecto expedita, asperiores molestias iure sequi
-              soluta, adipisci est praesentium officiis.
-            </p>
-            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-              fugiat ut voluptates, temporibus quam eius pariatur quia
-              laudantium repellat, nesciunt in itaque deserunt praesentium
-              molestiae velit optio numquam non beatae!
-              <ul className="list-disc list-inside">
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Lorem ipsum dolor sit.</li>
-              </ul>
-            </p>
-            <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ab
-              itaque nobis repellat praesentium error delectus sapiente. Iure
-              fugiat voluptatum dicta odio, sit tempora reiciendis, consectetur,
-              voluptate laborum quia iusto.
-            </p>
+            {/* When active */}
+            {/* <div className="relative h-auto"> */}
+            <div className="relative h-auto overflow-hidden">
+              {/* When active */}
+              {/* <div className="hidden"> */}
+              <div className="absolute inset-0 hidden bg-gradient-to-t from-white"></div>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                sit nostrum blanditiis officiis voluptatibus aspernatur, odio
+                saepe esse vel expedita corrupti odit consectetur impedit veniam
+                soluta illo ad quas delectus.
+              </p>
+              <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                reiciendis repudiandae aspernatur recusandae labore sit, earum
+                sint tempore quod mollitia dolorem odio. Similique porro
+                blanditiis natus, minima soluta reprehenderit ad?
+              </p>
+              <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                deleniti, molestiae fuga fugiat perspiciatis eius eligendi unde
+                ipsum iste architecto expedita, asperiores molestias iure sequi
+                soluta, adipisci est praesentium officiis.
+              </p>
+              <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                fugiat ut voluptates, temporibus quam eius pariatur quia
+                laudantium repellat, nesciunt in itaque deserunt praesentium
+                molestiae velit optio numquam non beatae!
+                <ul className="list-disc list-inside">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                </ul>
+              </p>
+              <h3 className="text-2xl font-bold">Lorem, ipsum dolor.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                ab itaque nobis repellat praesentium error delectus sapiente.
+                Iure fugiat voluptatum dicta odio, sit tempora reiciendis,
+                consectetur, voluptate laborum quia iusto.
+              </p>
+            </div>
 
             {/* button */}
             <a
